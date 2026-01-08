@@ -1,0 +1,20 @@
+{
+  "name": "advance-form-monorepo",
+  "version": "1.0.0",
+  "description": "A React library for rendering shadcn/ui components via config objects with TypeScript IntelliSense",
+  "private": true,
+  "workspaces": [
+    "packages/*",
+    "apps/*"
+  ],
+  "scripts": {
+    "dev": "turbo run dev",
+    "build": "turbo run build",
+    "lint": "turbo run lint",
+    "test": "turbo run test",
+    "clean": "turbo clean"
+  },
+  "devDependencies": {
+    "turbo": "^2.0.0"
+  }
+}
