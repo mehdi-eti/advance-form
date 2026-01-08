@@ -79,7 +79,7 @@ export type ComponentType =
 export interface ButtonProps {
   label?: string;
   variant?: 'default' | 'destructive' | 'outline' | 'secondary' | 'ghost' | 'link';
-  size?: 'sm' | 'md' | 'lg';
+  size?: 'default ' | 'xs ' | 'sm ' | 'lg ' | 'icon ' | 'icon-xs' | 'icon-sm' | 'icon-lg';
   disabled?: boolean;
   className?: string;
   onClick?: string; // Handler key

@@ -31,14 +31,14 @@ const NavConfig: ComponentConfig = {
     align: 'center',
   },
   children: [
-    { type: 'button', props: { label: 'Home', variant: 'ghost', onClick: 'goHome' } },
-    { type: 'button', props: { label: 'Login', variant: 'ghost', onClick: 'goLogin' } },
-    { type: 'button', props: { label: 'Contact', variant: 'ghost', onClick: 'goContact' } },
-    { type: 'button', props: { label: 'Register', variant: 'ghost', onClick: 'goRegistration' } },
-    { type: 'button', props: { label: 'Button', variant: 'ghost', onClick: 'goButton' } },
-    { type: 'button', props: { label: 'Grid', variant: 'ghost', onClick: 'goGrid' } },
-    { type: 'button', props: { label: 'Custom', variant: 'ghost', onClick: 'goCustom' } },
-    { type: 'button', props: { label: 'Utils', variant: 'ghost', onClick: 'goUtils' } },
+    { type: 'button', props: { label: 'Home', variant: 'link', onClick: 'goHome' } },
+    { type: 'button', props: { label: 'Login', variant: 'link', onClick: 'goLogin' } },
+    { type: 'button', props: { label: 'Contact', variant: 'link', onClick: 'goContact' } },
+    { type: 'button', props: { label: 'Register', variant: 'link', onClick: 'goRegistration' } },
+    { type: 'button', props: { label: 'Button', variant: 'link', onClick: 'goButton' } },
+    { type: 'button', props: { label: 'Grid', variant: 'link', onClick: 'goGrid' } },
+    { type: 'button', props: { label: 'Custom', variant: 'link', onClick: 'goCustom' } },
+    { type: 'button', props: { label: 'Utils', variant: 'link', onClick: 'goUtils' } },
   ],
 };
 

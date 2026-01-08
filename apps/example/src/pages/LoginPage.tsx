@@ -56,8 +56,6 @@ const LoginPageConfig: PageConfig = {
               props: {
                 label: 'Sign In',
                 type: 'submit',
-                variant: 'default',
-                size: 'md',
               },
             },
           ],
