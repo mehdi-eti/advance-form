@@ -150,6 +150,8 @@ const error = validateValue('invalid', {
 
 ### 4. Custom Component Registration
 
+> Note: Core shadcn-based components are auto-registered lazily on import. Use `registerComponents()` only if you want to add or override registrations.
+
 ```tsx
 import { registerComponents } from 'advance-form';
 

@@ -12,10 +12,4 @@ export * from './utils';
 export { renderComponent, renderPage, useHandlers } from './renderer';
 export { registerComponent, registerComponents } from './registry';
 export { validators, validateValue } from './validators';
-export { 
-  createForm, 
-  createCardForm, 
-  createGrid, 
-  createPage, 
-  validateFormData 
-} from './utils';
+export { createForm, createCardForm, createGrid, createPage, validateFormData } from './utils';

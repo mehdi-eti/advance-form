@@ -9,20 +9,20 @@ const LoginPageConfig: PageConfig = {
   layout: 'container',
   props: {
     maxWidth: 'sm',
-    padding: 'lg'
+    padding: 'lg',
   },
   children: [
     {
       type: 'card',
       props: {
         title: 'Sign In',
-        description: 'Enter your email and password to access your account'
+        description: 'Enter your email and password to access your account',
       },
       children: [
         {
           type: 'form',
           props: {
-            onSubmit: 'handleLogin'
+            onSubmit: 'handleLogin',
           },
           children: [
             {
@@ -30,26 +30,26 @@ const LoginPageConfig: PageConfig = {
               props: {
                 name: 'email',
                 placeholder: 'Email Address',
-                type: 'email'
+                type: 'email',
               },
               validation: {
                 required: true,
                 pattern: 'email',
-                maxLength: 100
-              }
+                maxLength: 100,
+              },
             },
             {
               type: 'input',
               props: {
                 name: 'password',
                 placeholder: 'Password',
-                type: 'password'
+                type: 'password',
               },
               validation: {
                 required: true,
                 minLength: 8,
-                maxLength: 50
-              }
+                maxLength: 50,
+              },
             },
             {
               type: 'button',
@@ -57,14 +57,14 @@ const LoginPageConfig: PageConfig = {
                 label: 'Sign In',
                 type: 'submit',
                 variant: 'default',
-                size: 'md'
-              }
-            }
-          ]
-        }
-      ]
-    }
-  ]
+                size: 'md',
+              },
+            },
+          ],
+        },
+      ],
+    },
+  ],
 };
 
 interface LoginPageProps {
@@ -76,10 +76,10 @@ export default function LoginPage({ onLogin }: LoginPageProps) {
     handleLogin: (formData: FormData) => {
       const email = formData.get('email') as string;
       const password = formData.get('password') as string;
-      
+
       console.log('Login form submitted:', { email, password });
       onLogin?.({ email, password });
-    }
+    },
   };
 
   return renderPage(LoginPageConfig, { handlers });

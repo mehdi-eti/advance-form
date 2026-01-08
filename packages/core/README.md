@@ -33,8 +33,8 @@ const config = {
   props: {
     label: 'Click me',
     variant: 'default',
-    size: 'md'
-  }
+    size: 'md',
+  },
 };
 
 export default function App() {
@@ -55,7 +55,7 @@ const loginPageConfig = {
       type: 'card',
       props: {
         title: 'Sign In',
-        description: 'Enter your email and password to login'
+        description: 'Enter your email and password to login',
       },
       children: [
         {
@@ -67,42 +67,42 @@ const loginPageConfig = {
               props: {
                 name: 'email',
                 placeholder: 'Email',
-                type: 'email'
+                type: 'email',
               },
               validation: {
                 required: true,
-                pattern: 'email'
-              }
+                pattern: 'email',
+              },
             },
             {
               type: 'input',
               props: {
                 name: 'password',
                 placeholder: 'Password',
-                type: 'password'
+                type: 'password',
               },
               validation: {
                 required: true,
-                minLength: 8
-              }
+                minLength: 8,
+              },
             },
             {
               type: 'button',
               props: {
                 label: 'Sign In',
-                type: 'submit'
-              }
-            }
-          ]
-        }
-      ]
-    }
-  ]
+                type: 'submit',
+              },
+            },
+          ],
+        },
+      ],
+    },
+  ],
 };
 
 export default function App() {
   const handlers = {
-    handleSubmit: (data) => console.log('Form submitted:', data)
+    handleSubmit: (data) => console.log('Form submitted:', data),
   };
 
   return renderPage(loginPageConfig, { handlers });
@@ -119,6 +119,8 @@ export default function App() {
 **Overlay**: Dialog, Drawer, Popover, Tooltip, Context Menu, Dropdown Menu  
 **And more**: Button, Label, Separator, Avatar, Calendar, Date Picker, Command, Combobox...
 
+> Note: The library auto-registers the core shadcn-based components on import (they are registered lazily). Use `listRegisteredComponents()` to inspect which components are currently registered, or call `registerComponents()` / `registerComponent()` to add/override registrations.
+
 ## TypeScript IntelliSense
 
 All configurations are fully typed with discriminated unions and generics for prop suggestions:
@@ -129,8 +131,8 @@ const config: ComponentConfig<'button'> = {
   props: {
     // IntelliSense suggests: variant, size, disabled, className, etc.
     variant: 'default', // 'default' | 'destructive' | 'outline' | 'secondary' | 'ghost' | 'link'
-    size: 'md' // 'sm' | 'md' | 'lg'
-  }
+    size: 'md', // 'sm' | 'md' | 'lg'
+  },
 };
 ```
 
@@ -143,12 +145,12 @@ import { registerComponents, renderComponent } from 'advance-form';
 import MyCustomCard from './MyCustomCard';
 
 registerComponents({
-  'custom-card': MyCustomCard
+  'custom-card': MyCustomCard,
 });
 
 const config = {
   type: 'custom-card',
-  props: { title: 'My Custom Component' }
+  props: { title: 'My Custom Component' },
 };
 
 export default function App() {
@@ -167,8 +169,8 @@ const config = {
   validation: {
     required: true,
     pattern: 'email',
-    maxLength: 100
-  }
+    maxLength: 100,
+  },
 };
 
 // Or custom validator
@@ -183,8 +185,8 @@ const config2 = {
   type: 'input',
   props: { name: 'username' },
   validation: {
-    custom: customValidator
-  }
+    custom: customValidator,
+  },
 };
 ```
 
